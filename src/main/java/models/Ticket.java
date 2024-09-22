@@ -1,5 +1,8 @@
 package models;
 
+import models.slot.Slot;
+import models.vehicle.Vehicle;
+
 public class Ticket {
     private int id;
     private User user;

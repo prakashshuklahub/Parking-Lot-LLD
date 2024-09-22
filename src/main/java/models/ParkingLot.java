@@ -1,5 +1,7 @@
 package models;
 
+import models.slot.Slot;
+import models.vehicle.Vehicle;
 import strategy.payment.PaymentChargesStrategy;
 import strategy.slot.SlotAssignStrategy;
 
@@ -22,7 +24,7 @@ public class ParkingLot {
         this.paymentChargesStrategy = paymentChargesStrategy;
     }
 
-    public Ticket parkVehicle(Vehicle vehicle,User user){
+    public Ticket parkVehicle(Vehicle vehicle, User user){
         Ticket ticket = new Ticket(vehicle,user);
         Slot slot = slotAssignStrategy.assignSlot(floorList,vehicle);
         ticket.setSlot(slot);

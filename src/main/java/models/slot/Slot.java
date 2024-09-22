@@ -1,4 +1,4 @@
-package models;
+package models.slot;
 
 public abstract class Slot {
 

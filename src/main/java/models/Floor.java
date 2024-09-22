@@ -1,5 +1,9 @@
 package models;
 
+import models.slot.BikeSlot;
+import models.slot.CarSlot;
+import models.slot.Slot;
+
 import java.util.ArrayList;
 import java.util.List;
 

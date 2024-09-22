@@ -1,6 +1,12 @@
 package strategy.slot;
 
 import models.*;
+import models.slot.BikeSlot;
+import models.slot.CarSlot;
+import models.slot.Slot;
+import models.vehicle.Bike;
+import models.vehicle.Car;
+import models.vehicle.Vehicle;
 
 import java.util.List;
 

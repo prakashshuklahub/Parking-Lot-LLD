@@ -1,6 +1,8 @@
 package org.example;
 
 import models.*;
+import models.vehicle.Car;
+import models.vehicle.Vehicle;
 import strategy.slot.NearestSlotStrategy;
 import strategy.payment.WeekendPaymentStrategy;
 

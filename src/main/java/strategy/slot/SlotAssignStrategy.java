@@ -1,8 +1,8 @@
 package strategy.slot;
 
 import models.Floor;
-import models.Slot;
-import models.Vehicle;
+import models.slot.Slot;
+import models.vehicle.Vehicle;
 
 import java.util.List;
 
