@@ -1,10 +1,10 @@
-package strategy;
+package strategy.slot;
 
 import models.*;
 
 import java.util.List;
 
-public class NearestSlotStrategy implements SlotAssignStrategy{
+public class NearestSlotStrategy implements SlotAssignStrategy {
 
     @Override
     public Slot assignSlot(List<Floor> floors, Vehicle vehicle) {

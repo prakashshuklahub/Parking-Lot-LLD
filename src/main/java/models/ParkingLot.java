@@ -1,7 +1,7 @@
 package models;
 
-import strategy.PaymentChargesStrategy;
-import strategy.SlotAssignStrategy;
+import strategy.payment.PaymentChargesStrategy;
+import strategy.slot.SlotAssignStrategy;
 
 import java.util.ArrayList;
 import java.util.List;

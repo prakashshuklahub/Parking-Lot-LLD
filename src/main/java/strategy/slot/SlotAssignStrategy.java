@@ -1,4 +1,4 @@
-package strategy;
+package strategy.slot;
 
 import models.Floor;
 import models.Slot;

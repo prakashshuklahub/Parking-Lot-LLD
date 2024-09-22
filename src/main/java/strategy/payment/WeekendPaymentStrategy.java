@@ -1,8 +1,8 @@
-package strategy;
+package strategy.payment;
 
 import models.Ticket;
 
-public class WeekendPaymentStrategy implements PaymentChargesStrategy{
+public class WeekendPaymentStrategy implements PaymentChargesStrategy {
     @Override
     public int generateCharges(Ticket ticket) {
         int hours = ticket.getEntryTime()-ticket.getExitTime();

@@ -1,8 +1,8 @@
 package org.example;
 
 import models.*;
-import strategy.NearestSlotStrategy;
-import strategy.WeekendPaymentStrategy;
+import strategy.slot.NearestSlotStrategy;
+import strategy.payment.WeekendPaymentStrategy;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
