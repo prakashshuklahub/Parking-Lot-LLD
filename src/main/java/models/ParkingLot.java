@@ -27,6 +27,7 @@ public class ParkingLot {
     public Ticket parkVehicle(Vehicle vehicle, User user){
         Ticket ticket = new Ticket(vehicle,user);
         Slot slot = slotAssignStrategy.assignSlot(floorList,vehicle);
+        slot.setOccupied(true);
         ticket.setSlot(slot);
         ticket.setVehicle(vehicle);
         ticket.setEntryTime(10);
@@ -37,6 +38,7 @@ public class ParkingLot {
     public Ticket payCharges(Ticket ticket){
         int amount  = paymentChargesStrategy.generateCharges(ticket);
         ticket.setAmount(amount);
+        ticket.getSlot().setOccupied(false);
         return ticket;
     }
 }
