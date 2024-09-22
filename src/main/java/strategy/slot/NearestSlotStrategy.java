@@ -17,6 +17,7 @@ public class NearestSlotStrategy implements SlotAssignStrategy {
         Floor nearestFloor = floors.get(0);
         List<Slot> slots = nearestFloor.getSlots();
         for(Slot slot:slots){
+            if(slot.isOccupied())continue;
             if(vehicle instanceof Bike && slot instanceof BikeSlot){
                 return slot;
             }else if(vehicle instanceof Car && slot instanceof CarSlot){

@@ -13,8 +13,9 @@ public class ParkingLot {
     List<Floor> floorList;
     PaymentChargesStrategy paymentChargesStrategy;
     SlotAssignStrategy slotAssignStrategy;
+    public static ParkingLot instance;
 
-    public ParkingLot(int numberOfFloors , PaymentChargesStrategy paymentChargesStrategy, SlotAssignStrategy slotAssignStrategy){
+    private ParkingLot(int numberOfFloors , PaymentChargesStrategy paymentChargesStrategy, SlotAssignStrategy slotAssignStrategy){
         floorList = new ArrayList<>();
         for (int i=0;i<numberOfFloors;i++){
             Floor floor = new Floor(i+1);
@@ -24,7 +25,16 @@ public class ParkingLot {
         this.paymentChargesStrategy = paymentChargesStrategy;
     }
 
-    public Ticket parkVehicle(Vehicle vehicle, User user){
+    public static ParkingLot getInstance(int numberOfFloors , PaymentChargesStrategy paymentChargesStrategy, SlotAssignStrategy slotAssignStrategy){
+        if(instance==null){
+            synchronized (ParkingLot.class){
+                instance = new ParkingLot(numberOfFloors,paymentChargesStrategy,slotAssignStrategy);
+            }
+        }
+        return instance;
+    }
+
+    public synchronized Ticket parkVehicle(Vehicle vehicle, User user){
         Ticket ticket = new Ticket(vehicle,user);
         Slot slot = slotAssignStrategy.assignSlot(floorList,vehicle);
         slot.setOccupied(true);

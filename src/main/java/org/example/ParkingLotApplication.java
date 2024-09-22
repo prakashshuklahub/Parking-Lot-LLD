@@ -10,7 +10,7 @@ import strategy.payment.WeekendPaymentStrategy;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class ParkingLotApplication {
     public static void main(String[] args) {
-        ParkingLot parkingLot = new ParkingLot(3, new WeekendPaymentStrategy(),new NearestSlotStrategy());
+        ParkingLot parkingLot = ParkingLot.getInstance(3, new WeekendPaymentStrategy(),new NearestSlotStrategy());
         Vehicle swift = new Car("Red",12123);
         User user = new User(2003312,"prakash");
         Ticket ticket = parkingLot.parkVehicle(swift,user);
